@@ -19,7 +19,7 @@ export default class Conversor extends Component {
   converter(){
   
     let de_para = `${this.props.moedaA}_${this.props.moedaB}`;
-    let url = `https://free.currconv.com/api/v7/convert?apiKey=do-not-use-this-key&q=${de_para}&compact=y`
+    let url = `https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BTC&to_currency=EUR&apikey=ZRH58691ZX2ENX1U`
     
 
     fetch(url)
