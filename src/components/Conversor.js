@@ -19,8 +19,8 @@ export default class Conversor extends Component {
   converter(){
   
     let de_para = `${this.props.moedaA}_${this.props.moedaB}`;
-    let url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${de_para}&compact=y`
-
+    let url = `https://api.coingecko.com/api/v3/coins/convert?apiKey=do-not-use-this-key&q=${de_para}&compact=y`
+    
     
 
     fetch(url)
