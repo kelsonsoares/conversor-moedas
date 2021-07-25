@@ -19,8 +19,8 @@ export default class Conversor extends Component {
   converter(){
   
     let de_para = `${this.props.moedaA}_${this.props.moedaB}`;
-    let url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`
-    
+    let url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${de_para}&compact=y`
+
     
 
     fetch(url)
@@ -30,7 +30,7 @@ export default class Conversor extends Component {
 
     })
     .then(json=>{
-      let cotacao = json[].val;
+      let cotacao = json[de_para].val;
       let moedaB_valor = (parseFloat(this.state.moedaA_valor) * cotacao).toFixed(2);
       this.setState({moedaB_valor})
     });
