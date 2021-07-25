@@ -30,7 +30,7 @@ export default class Conversor extends Component {
 
     })
     .then(json=>{
-      let cotacao = json[de_para].val;
+      let cotacao = json[].val;
       let moedaB_valor = (parseFloat(this.state.moedaA_valor) * cotacao).toFixed(2);
       this.setState({moedaB_valor})
     });
