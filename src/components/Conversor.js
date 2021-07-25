@@ -19,8 +19,8 @@ export default class Conversor extends Component {
   converter(){
   
     let de_para = `${this.props.moedaA}_${this.props.moedaB}`;
-    let url = `https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=BTC&to_currency=BRL&apikey=${de_para}&compact=y`
-    
+    let url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${de_para}&compact=y`
+               
 
     fetch(url)
     .then(res => {
